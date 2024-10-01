@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .nav_bg {
-    background-color: #F4F7F7;
-    
-  }
-}
 body {
   @apply font-sans;
 }

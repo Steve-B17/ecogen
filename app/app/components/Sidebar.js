@@ -30,7 +30,7 @@ export default function FloatingSidebar() {
           onMouseEnter={() => setActive(icon.id)}
           onMouseLeave={() => setActive(null)}
         >
-          <Image src={icon.src} alt={icon.alt} width={20} height={20} />
+          <Image src={icon.src} alt={icon.alt} width={40} height={40} />
         </div>
       ))}
     </div>
