@@ -1,7 +1,7 @@
 "use client";
-import Image from "next/image"; // Ensure this import is included at the top
+import Image from "next/image";
 import { useState } from "react";
-import Link from "next/link"; // Import Link for navigation
+import Link from "next/link"; // Import for navigation
 import Home from "../public/assets/icons/home.png";
 import Solar from "../public/assets/icons/solarpanel.png";
 import Wind from "../public/assets/icons/wind.png";
@@ -12,14 +12,13 @@ import Blog from "../public/assets/icons/blog.png";
 export default function FloatingSidebar() {
   const [active, setActive] = useState(null); // To manage active states of the icons
 
-  // Array of icons with corresponding links
   const icons = [
     { id: 1, src: Home, alt: "Home", href: "/" },
     { id: 2, src: Solar, alt: "Solar", href: "/solar" },
     { id: 3, src: Wind, alt: "Wind", href: "/wind" },
     { id: 4, src: Sun, alt: "Sun", href: "/sun" },
     { id: 5, src: Windmill, alt: "Windmill", href: "/windmill" },
-    { id: 6, src: Blog, alt: "Blog", href: "/blog" },
+    { id: 6, src: Blog, alt: "Blog", href: "/forecast" }, // Use actual route for Forecast page
   ];
 
   return (
