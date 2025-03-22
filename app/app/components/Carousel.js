@@ -14,12 +14,12 @@ const carouselData = [
   },
   {
     id: 2,
-    title: "Another Feature",
+    title: "Real-Time Weather Updates",
     image: Two,
   },
   {
     id: 3,
-    title: "Yet Another Feature",
+    title: "Accurate Wind Forecasts",
     image: Three,
   },
 ];

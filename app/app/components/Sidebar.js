@@ -1,41 +1,73 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import Link from "next/link"; // Import for navigation
+import Link from "next/link";
 import Home from "../public/assets/icons/home.png";
-import Solar from "../public/assets/icons/solarpanel.png";
 import Wind from "../public/assets/icons/wind.png";
-import Sun from "../public/assets/icons/sun.png";
 import Windmill from "../public/assets/icons/windmill.png";
 import Blog from "../public/assets/icons/blog.png";
+import Logo from "../public/assets/logo.png"; // Make sure this path is correct
 
-export default function FloatingSidebar() {
-  const [active, setActive] = useState(null); // To manage active states of the icons
+export default function NavigationBar() {
+  const [active, setActive] = useState(null);
 
   const icons = [
     { id: 1, src: Home, alt: "Home", href: "/" },
-    { id: 2, src: Solar, alt: "Solar", href: "/solar" },
-    { id: 3, src: Wind, alt: "Wind", href: "/wind" },
-    { id: 4, src: Sun, alt: "Sun", href: "/sun" },
-    { id: 5, src: Windmill, alt: "Windmill", href: "/windmill" },
-    { id: 6, src: Blog, alt: "Blog", href: "/forecast" }, // Use actual route for Forecast page
+    { id: 2, src: Wind, alt: "Wind", href: "/wind" },
+    { id: 3, src: Windmill, alt: "Windmill", href: "/windmill" },
+    { id: 4, src: Blog, alt: "Blog", href: "/forecast" },
   ];
 
   return (
-    <div className="fixed left-4 top-1/2 transform -translate-y-1/2">
-      {icons.map((icon) => (
-        <Link key={icon.id} href={icon.href} passHref>
-          <div
-            className={`flex items-center justify-center mb-4 p-4 bg-white rounded-full shadow-lg transform transition duration-300 ease-in-out hover:scale-110 hover:bg-gray-300 cursor-pointer ${
-              active === icon.id ? "bg-gray-500 text-white" : ""
-            }`}
-            onMouseEnter={() => setActive(icon.id)}
-            onMouseLeave={() => setActive(null)}
-          >
-            <Image src={icon.src} alt={icon.alt} width={40} height={40} />
+    <header className="fixed top-5 left-1/2 w-[80%] h-fit rounded-lg bg-gradient-to-r from-white to-green-100 shadow-md z-20 transform -translate-x-1/2">
+
+      <div className=" mx-auto px-4">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo and Name */}
+          <div className="flex items-center space-x-2">
+            <Image
+              src={Logo}
+              alt="Eco-Gen Forecasts Logo"
+              width={70}
+              height={70}
+            />
+            <h1 className="text-3xl font-bold text-black">Eco-Gen Forecasts</h1>
           </div>
-        </Link>
-      ))}
-    </div>
+
+          {/* Navigation Icons */}
+          <nav className="flex items-center space-x-6">
+            {icons.map((icon) => (
+              <Link key={icon.id} href={icon.href} passHref>
+                <div
+                  className="relative"
+                  onMouseEnter={() => setActive(icon.id)}
+                  onMouseLeave={() => setActive(null)}
+                >
+                  <div
+                    className={`flex items-center justify-center p-3 bg-white rounded-full shadow-md transform transition duration-300 ease-in-out hover:scale-110 hover:bg-gray-100 ${
+                      active === icon.id ? "bg-green-500" : ""
+                    }`}
+                  >
+                    <Image
+                      src={icon.src}
+                      alt={icon.alt}
+                      width={28}
+                      height={28}
+                    />
+                  </div>
+
+                  {/* Tooltip */}
+                  {active === icon.id && (
+                    <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-10 bg-gray-800 text-white px-3 py-1 rounded whitespace-nowrap">
+                      {icon.alt}
+                    </div>
+                  )}
+                </div>
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </div>
+    </header>
   );
 }

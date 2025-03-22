@@ -38,20 +38,6 @@ export default function Homepage() {
   return (
     <>
       <div className="relative">
-        <header className="absolute top-0 left-0 w-full flex justify-between items-center p-5 z-20">
-          <div className="flex items-center space-x-2">
-            <Image
-              src={Logo}
-              alt="Eco-Gen Forecasts Logo"
-              width={40}
-              height={40}
-            />
-            <h1 className="text-2xl font-bold text-white">Eco-Gen Forecasts</h1>
-          </div>
-          <button className="bg-teal-500 text-white text-2xl space-x-2 py-2 px-9 rounded-lg hover:bg-green-600">
-            Contact Us
-          </button>
-        </header>
         <div className="relative">
           <Image
             src={Hero}
