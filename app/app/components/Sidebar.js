@@ -6,22 +6,22 @@ import Home from "../public/assets/icons/home.png";
 import Wind from "../public/assets/icons/wind.png";
 import Windmill from "../public/assets/icons/windmill.png";
 import Blog from "../public/assets/icons/blog.png";
-import Logo from "../public/assets/logo.png"; // Make sure this path is correct
+import Logo from "../public/assets/logo.png";
 
 export default function NavigationBar() {
   const [active, setActive] = useState(null);
 
+  // Use string paths instead of component references
   const icons = [
     { id: 1, src: Home, alt: "Home", href: "/" },
     { id: 2, src: Wind, alt: "Wind", href: "/wind" },
     { id: 3, src: Windmill, alt: "Windmill", href: "/windmill" },
-    { id: 4, src: Blog, alt: "Blog", href: "/forecast" },
+    { id: 4, src: Blog, alt: "Blog", href: "/blog" },
   ];
 
   return (
     <header className="fixed top-5 left-1/2 w-[80%] h-fit rounded-lg bg-gradient-to-r from-white to-green-100 shadow-md z-20 transform -translate-x-1/2">
-
-      <div className=" mx-auto px-4">
+      <div className="mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Name */}
           <div className="flex items-center space-x-2">
