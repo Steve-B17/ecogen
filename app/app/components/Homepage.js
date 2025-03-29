@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Logo from "../public/assets/logo.png";
 import Hero from "../public/assets/hero.png";
 import project from "../public/assets/project.png";
 import Carousel from "./Carousel.js";
