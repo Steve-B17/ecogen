@@ -1,6 +1,5 @@
-// File: app/blog/page.js
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 export default function BlogPage() {
@@ -17,7 +16,7 @@ export default function BlogPage() {
       readTime: "5 min read",
       category: "wind",
       featured: true,
-      image: "/api/placeholder/600/400",
+      image: "/api/placeholder/600/400?text=Global+Wind+Farms+Panorama&bg=4CAF50&color=FFFFFF",
     },
     {
       id: 2,
@@ -29,7 +28,7 @@ export default function BlogPage() {
       readTime: "4 min read",
       category: "solar",
       featured: false,
-      image: "/api/placeholder/600/400",
+      image: "/api/placeholder/600/400?text=Advanced+Solar+Panel+Array&bg=2196F3&color=FFFFFF",
     },
     {
       id: 3,
@@ -41,7 +40,7 @@ export default function BlogPage() {
       readTime: "7 min read",
       category: "wind",
       featured: false,
-      image: "/api/placeholder/600/400",
+      image: "/api/placeholder/600/400?text=Offshore+Floating+Wind+Turbines&bg=009688&color=FFFFFF",
     },
     {
       id: 4,
@@ -53,7 +52,7 @@ export default function BlogPage() {
       readTime: "6 min read",
       category: "innovation",
       featured: true,
-      image: "/api/placeholder/600/400",
+      image: "/api/placeholder/600/400?text=Green+Hydrogen+Energy+Storage&bg=FF9800&color=FFFFFF",
     },
     {
       id: 5,
@@ -65,7 +64,7 @@ export default function BlogPage() {
       readTime: "4 min read",
       category: "wind",
       featured: false,
-      image: "/api/placeholder/600/400",
+      image: "/api/placeholder/600/400?text=Community+Owned+Wind+Project&bg=8BC34A&color=FFFFFF",
     },
     {
       id: 6,
@@ -77,7 +76,7 @@ export default function BlogPage() {
       readTime: "8 min read",
       category: "innovation",
       featured: false,
-      image: "/api/placeholder/600/400",
+      image: "/api/placeholder/600/400?text=Innovative+Wind+Turbine+Designs&bg=673AB7&color=FFFFFF",
     },
   ];
 
