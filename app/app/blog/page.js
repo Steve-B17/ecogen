@@ -18,7 +18,7 @@ export default function BlogPage() {
       readTime: "5 min read",
       category: "wind",
       featured: true,
-      image: "/api/placeholder/600/400",
+      image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&q=80",
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ export default function BlogPage() {
       readTime: "4 min read",
       category: "solar",
       featured: false,
-      image: "/api/placeholder/600/400",
+      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80",
     },
     {
       id: 3,
@@ -42,7 +42,7 @@ export default function BlogPage() {
       readTime: "7 min read",
       category: "wind",
       featured: false,
-      image: "/api/placeholder/600/400",
+      image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&q=80",
     },
     {
       id: 4,
@@ -54,7 +54,7 @@ export default function BlogPage() {
       readTime: "6 min read",
       category: "innovation",
       featured: true,
-      image: "/api/placeholder/600/400",
+      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80",
     },
     {
       id: 5,
@@ -66,7 +66,7 @@ export default function BlogPage() {
       readTime: "4 min read",
       category: "wind",
       featured: false,
-      image: "/api/placeholder/600/400",
+      image: "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=80",
     },
     {
       id: 6,
@@ -78,7 +78,7 @@ export default function BlogPage() {
       readTime: "8 min read",
       category: "innovation",
       featured: false,
-      image: "/api/placeholder/600/400",
+      image: "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&q=80",
     },
   ];
 
