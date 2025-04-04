@@ -14,8 +14,8 @@ export default function NavigationBar() {
   // Use string paths instead of component references
   const icons = [
     { id: 1, src: Home, alt: "Home", href: "/" },
-    { id: 2, src: Wind, alt: "Wind", href: "/wind" },
-    { id: 3, src: Windmill, alt: "Windmill", href: "/windmill" },
+    { id: 2, src: Wind, alt: "Wind Power", href: "/windpower" },
+    { id: 3, src: Windmill, alt: "Wind Direction", href: "/winddirection" },
     { id: 4, src: Blog, alt: "Blog", href: "/blog" },
   ];
 
