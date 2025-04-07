@@ -7,6 +7,7 @@ import Wind from "../public/assets/icons/wind.png";
 import Windmill from "../public/assets/icons/windmill.png";
 import Blog from "../public/assets/icons/blog.png";
 import Logo from "../public/assets/logo.png";
+import WindSpeed from "../public/assets/icons/wind.png";
 
 export default function NavigationBar() {
   const [active, setActive] = useState(null);
@@ -16,7 +17,9 @@ export default function NavigationBar() {
     { id: 1, src: Home, alt: "Home", href: "/" },
     { id: 2, src: Wind, alt: "Wind Power", href: "/windpower" },
     { id: 3, src: Windmill, alt: "Wind Direction", href: "/winddirection" },
-    { id: 4, src: Blog, alt: "Blog", href: "/blog" },
+    { id: 4, src: WindSpeed, alt: "Wind Speed", href: "/windspeed" },
+    { id: 5, alt: "Dashboard", href: "/dashboard", isSvg: true },
+    { id: 6, src: Blog, alt: "Blog", href: "/blog" },
   ];
 
   return (
@@ -48,12 +51,32 @@ export default function NavigationBar() {
                       active === icon.id ? "bg-green-500" : ""
                     }`}
                   >
-                    <Image
-                      src={icon.src}
-                      alt={icon.alt}
-                      width={28}
-                      height={28}
-                    />
+                    {icon.isSvg ? (
+                      <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        strokeWidth="2" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round"
+                        width="28"
+                        height="28"
+                        className="text-gray-700"
+                      >
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                      </svg>
+                    ) : (
+                      <Image
+                        src={icon.src}
+                        alt={icon.alt}
+                        width={28}
+                        height={28}
+                      />
+                    )}
                   </div>
 
                   {/* Tooltip */}
